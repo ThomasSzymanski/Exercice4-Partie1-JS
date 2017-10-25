@@ -9,17 +9,17 @@
             <label for="nom">Nom : </label><input type="text" name="nom" id="nom"/>
             <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
             <label for="ville">Ville : </label><input type="text" name="ville" id="ville"/>
-            <button  name="valider" id="valider" onclick="valide()">Valider</button>
+            <button  name="valider" id="valider" onclick="valide();">Valider</button>
         </form>
         <script>
-       		function valide()
-       		{
+       		function valide(){
 	        	var nom = document.getElementById("nom").value;
 	    		var prenom = document.getElementById("prenom").value;
 	    		var ville = document.getElementById("ville").value;
-	    		alert('Nom : ' + nom + '\nPrénom : ' + prenom + '\nVille : ' + ville);
+                if(nom && prenom && ville && isNaN(nom) == true && isNaN(prenom) == true && isNaN(ville) == true){
+                    alert('Nom : ' + nom + '\nPrénom : ' + prenom + '\nVille : ' + ville);
+                }
     		}
-    		
         </script>
     </body>
 </html>
